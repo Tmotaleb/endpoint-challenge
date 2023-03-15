@@ -1,13 +1,13 @@
 import * as moment from "moment";
 
-function isOverdue(item) {
+const isOverdue = (item) => {
   if (!item.isComplete && item.dueDate) {
     const today = new Date();
     const dueDate = new Date(item.dueDate);
     return dueDate < today;
   }
   return false;
-}
+};
 
 const formattedDate = (date) => {
   if (date !== null) {
